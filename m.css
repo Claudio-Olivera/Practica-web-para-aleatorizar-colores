@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+.h1{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    color:blueviolet;
+    text-shadow: 1px 1px 1px aqua;
+}
+
+.nav-center{
+    
+    width: 100%;
+    height: 100px;
+    
+}
+
+.nav-links{
+    text-decoration: none;
+    list-style-type:none;
+    text-align: center;
+    padding: 30px;
+    width: 80%;
+    height: 30px;
+    border-radius: 90px;
+    box-shadow: 1px 1px 2px black;
+    border:1px solid blueviolet ;
+    margin-left:8%;
+    color:blueviolet;
+    text-shadow: 1px 1px 1px aqua;
+    
+}
+.nav-a:hover{
+    color:rgb(255, 236, 127);
+    text-shadow:4px 4px 4px blueviolet;
+    transform:scale(1,1.5);
+    text-transform: uppercase;
+}
+
+.nav-li{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.nav-a{
+    
+    margin-bottom: 150px;
+    margin-right: 80px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size:35px;
+    text-decoration: none;
+    color:blueviolet;
+    padding: 5px;
+    border-radius: 20px;
+    
+}
+
+.container {
+    display: block;
+    float: left;
+    margin-top: 25%;
+    background-color:rgba(250, 250, 250, 0.267);
+    width: 50%;
+    height: 100px;
+    margin-left: 25%;
+    border-radius: 50px;
+    border: 1px solid black;
+    box-shadow: 1px 2px 3px rgb(0, 0, 0);
+    
+}
+
+.container-h2{
+    display: block;
+    float: left;
+    margin-top:4%;
+    margin-left: 5%;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.btn {
+    display: block;
+    float: center;
+    margin-left: 36%;
+    margin-top: 15%;
+   background-color: transparent;
+    height: 70px;
+    width: 30%;
+    border-radius: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 1px solid blueviolet;
+    box-shadow: 1px 1px 2px black;
+    color: blueviolet;
+    text-shadow: 2px 2px 2px aqua;
+    transform: 300ms;
+}
+
+.btn:hover{
+    color:yellow;
+    text-shadow:4px 4px 4px blueviolet;
+    transition: 1s;
+    transform:scale(1,1.5);
+    text-transform: uppercase;
+}
+
+.article{
+    display: block;
+    float: left;
+    width: 30%;
+    height: 10px;
+    margin-top:-24%;
+    margin-left: 35%;
+}
+.paragraph-two{
+    color: white;
+    font-size: 18px;
+}
+
+.paragraph{
+    font-size: 18px;
+    color: black;
+}
