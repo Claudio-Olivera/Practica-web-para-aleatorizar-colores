@@ -1,186 +1,152 @@
 *{
     margin: 0px;
-    border: 0px;
+    padding: 0px;
 }
-/* nombre de la web (h1) */
-
-.div-h1{
-    display: grid;
-    width: 100%;
-    grid-template-rows: 200px ;
-    background-color: transparent;
-}
-
-@media(max-width:941px){
-    .div-h1{
-        height: 60px;
-    }
-    }
-/* el h1 hacerlo con flex */
-.h1{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3%;
+/* BODY */
+.body{
     font-family: 'Press Start 2P', cursive;
-    font-size: 70px;
-    color:blueviolet;
-    text-shadow: 1px 1px 1px aqua;
 }
-@media(max-width:941px){
-    .h1{
-        font-size: 30px;
-        margin-bottom:-50px;
+/* TITULO H1 */
+.div-h1{
+display: grid;
+gap: 1rem;
+grid-auto-rows: 10rem;
+grid-template-columns: repeat(auto-fill, minmax(75rem, 1fr));
+
+
+}
+
+.h1{
+    background-clip: text ;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(75rem, 1fr));
+    margin-top: 4rem;
+    font-size: 4.5rem;
+    text-align: center;
+    /* aca empiezan las configuraciones para hacer posible la "animacion" */
+    color: transparent;
+    background-image:linear-gradient(to left, #ff3c00, #2500f8, #fbff00, #48ff00, #ff00aa);    
+    -webkit-background-clip: text;
+    animation: color 3s linear infinite;
+    background-size: 50%;    
+    
+
+}
+/* mas configuraciones para hacer posible la "animacion" */
+@keyframes color {
+    from {
+        background-position: 0% 50%;
     }
+
+    to {
+        background-position: 100% 50%;
     }
+}
 
 
-/* nav */
-
+/* NAVEGACION */
 .nav{
-    display: flex;
-    flex-direction: left;
-    justify-content: space-around;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 7rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 75rem), 1fr));
 }
 
 .nav-ul{
-     list-style: none; /*quito la bolita de la lista */
-    
+ 
 }
 
 .nav-li{
-    display: flex;
-    flex-direction: left;
-    justify-content: space-around;    
-    margin-top: 6%;
-    box-shadow: 1px 1px 2px black;
-    border:1px solid blueviolet ;
-    border-radius: 50px;
-    padding: 20px;
-    background-color:rgba(250, 250, 250, 0.267);
-   
+    display:grid;
+    gap:2rem;
+    grid-auto-rows: 2rem;
+    grid-template-columns:repeat(auto-fill, minmax(75rem, 1fr));
 }
-@media (max-width:1629px){
-    .nav-li{
-        margin-top: -20px;
-    }
-}
-
-    @media(max-width:945px){
-        .nav-li{
-            margin-top: 1px;
-        }
-        }
 
 .nav-a{
-    margin-right: 80px;
-    display: flex;
-    flex-direction: left;
-      
-    text-decoration: none; /* quito la linea debajo de los enlaces */
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    font-size:35px;
-    color:blueviolet;
-    text-shadow: 1px 1px 1px aqua;
+text-decoration: none;
+text-align: center;
+font-size: 28px;
 }
-@media (max-width:941px){
-    .nav-a{
-        font-size: 14px;
-        margin-right: 10px;
-        width: auto;
-    }
-    }
-    @media (max-width:400px){
-        .nav-a{
-            font-size: 10px;
-            text-align: center;
-        }
-        }
-  
+/* MAIN */
 .main{
-    display: grid;
-    grid-template-rows: auto 200px;
-    gap:100px;
-    background-color: transparent;
-    text-align: center;
+    display:grid;
+    gap:20rem;
+    grid-auto-rows: 2rem;
+    grid-template-columns:repeat(auto-fill, minmax(70rem, 1fr));
 }
-
+/* donde estan los textos, le doy letra, margen superior, los centro y le doy interlineado y tamaño */
 .article{
-    margin-top: 2%;
+    margin-top: 30px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-align: center;
+   line-height: 28px;
+   font-size: 30px;
+   
 }
-@media (max-width:941px){
-    .article{
-        font-size: 10px;
-        text-align: center;
-    }
-    }
 
 
 .paragraph{
-    font-size: 18px;
-    color: black;
-}
-.paragraph-two{
-    margin-top: 2%;
-    font-size: 18px;
-    color: white;
-}
-.container{
-    display: grid;
-    grid-template-rows:60px 20px ;
-    justify-content: center;
-}
-.container-h2{
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    font-family: 'Press Start 2P', cursive;
-    margin-top: -40px;
-}
-@media(max-width:700px){
-    .container-h2{
-        margin-top: -50px;
-    }
+   
 }
 
-@media (max-width:941px){
+.paragraph-two{
+   color: white;
+}
+/* desaparecer el texto del parrafo 2 , hacer un interlineado mas grande a parrafo y modificar tamaño de background color */
+@media (max-width: 600px) {
+    .paragraph-two {
+      display: none;
+    }
+    .paragraph{
+        line-height: 190%;
+      
+    }
     .container-h2{
-        font-size: 20px;
-        text-align: center;
+        margin-bottom: 80px;
+        font-size: 30px;
     }
-    }
-    @media (max-width:700px){
-        .container-h2{
-            text-align: center;
-        }
-        }
+  }
+/* DIV CON EL MENSAJE Y EL BOTON */
+.container{
+    margin-top: 80px;
+}
+
+.container-h2{
+    display:grid;
+    gap:1rem;
+    grid-auto-rows: 1rem;
+    grid-template-columns:repeat(auto-fill, minmax(75rem, 1fr));
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 .btn{
-    background-color: transparent;
-    height: 70px;
-    width: 100%;
-    border-radius: 50px;
+    display:grid;
+    gap:1rem;
+    grid-auto-rows: 4rem;
+    grid-template-columns:repeat(auto-fill, minmax(30rem, 1fr));
+    margin: auto;
+     
+    /* un simple border radius al boton */
+
+    border-radius: 30px 10px 30px 10px;
+  
+    /* referido al texto del boton */
+     
+    text-align: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 30px;
-    text-transform: uppercase;
-    border: 1px solid blueviolet;
-    box-shadow: 1px 1px 2px black;
-    color: blueviolet;
-    text-shadow: 2px 2px 2px aqua;
-    background-color:rgba(250, 250, 250, 0.267);
+    line-height: 65px;
+
+    /* para hacer el efecto de colores */
+
+    color: transparent;
+    background-image:linear-gradient(to left, #ff3c00, #2500f8, #fbff00, #48ff00, #ff00aa);    
+    -webkit-background-clip: text;
+    animation: color 3s linear infinite;
+    background-size: 50%;    
 }
 
-
-.btn:hover{
-    color:yellow;
-    text-shadow:3px 3px 3px blueviolet;
-    transition: 1.3s;
-    transform:scale(1,1);
-}
-
-.nav-a:hover{
-    color:rgb(255, 236, 127);
-    text-shadow:3px 3px 3px blueviolet;
-    transition: 1.8s;
-}
